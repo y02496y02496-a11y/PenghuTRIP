@@ -1,0 +1,52 @@
+{
+  "entities": {
+    "Trip": {
+      "title": "Trip",
+      "description": "An itinerary containing daily schedules, tasks, and notes",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Title of the trip"
+        },
+        "description": {
+          "type": "string",
+          "description": "A brief description of the trip"
+        },
+        "startDate": {
+          "type": "string",
+          "description": "Start date in YYYY-MM-DD format"
+        },
+        "endDate": {
+          "type": "string",
+          "description": "End date in YYYY-MM-DD format"
+        },
+        "userId": {
+          "type": "string",
+          "description": "Owner UID of the trip"
+        },
+        "schedule": {
+          "type": "object",
+          "description": "The daily schedule. Map of dynamic day keys (e.g., '6-18') containing list of tasks and events."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when the trip was created"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when the trip was last updated"
+        }
+      },
+      "required": ["title", "startDate", "endDate", "userId", "schedule", "createdAt", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/trips/{tripId}": {
+      "schema": "Trip",
+      "description": "Stores itineraries for users"
+    }
+  }
+}
