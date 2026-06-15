@@ -1,0 +1,6 @@
+{
+  "name": "旅遊行程表與地標管理工具",
+  "description": "記錄每日旅遊任務行程與任務打卡，支援 AI 熱門美食與景點即時地圖搜尋、即時天氣分析，並透過 Google Firebase 進行多端裝置雲端備份與同步。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
